@@ -22,26 +22,86 @@ A mock iOS accountability app that combines user authentication, onboarding, and
 
 ```
 PacketWatch/
-├── PacketWatch/                    # Main app
-│   ├── PacketWatchApp.swift        # Entry point
-│   └── Views/
-│       └── DashboardView.swift     # Main UI
+├── PacketWatch/                        # Main app target
+│   ├── PacketWatchApp.swift            # Entry point
+│   ├── ContentView.swift               # Root view
+│   │
+│   ├── Core/                           # Domain models and core logic
+│   │   ├── Features/
+│   │   │   └── WellKnownFeatureIds.swift
+│   │   ├── Fingerprints/
+│   │   │   ├── WellKnownAppFingerprints.swift
+│   │   │   └── WellKnownBrowserFingerprints.swift
+│   │   ├── Models/                     # Data models
+│   │   │   ├── AccountabilityNetwork.swift
+│   │   │   ├── ActivityEntry.swift
+│   │   │   ├── ActivityStream.swift
+│   │   │   ├── BaseModel.swift
+│   │   │   ├── FilterSettings.swift
+│   │   │   ├── Invitation.swift
+│   │   │   ├── ProposedFilterSettings.swift
+│   │   │   └── User.swift
+│   │   └── Validation/
+│   │       ├── BrowsingContext.swift       # App inference, browser detection
+│   │       └── DomainValidationProvider.swift  # Blocklist checking, categorization
+│   │
+│   ├── Features/                       # UI feature modules
+│   │   ├── Auth/
+│   │   │   ├── AuthComponents.swift
+│   │   │   ├── AuthViewModel.swift
+│   │   │   ├── ForgotPasswordView.swift
+│   │   │   ├── SignInView.swift
+│   │   │   ├── SignUpView.swift
+│   │   │   └── WelcomeView.swift
+│   │   ├── Dashboard/
+│   │   │   ├── DashboardView.swift
+│   │   │   └── DashboardViewModel.swift
+│   │   ├── Networks/
+│   │   │   └── NetworksListView.swift
+│   │   ├── Onboarding/
+│   │   │   ├── InvitationsView.swift
+│   │   │   ├── OnboardingView.swift
+│   │   │   └── OnboardingViewModel.swift
+│   │   ├── Shared/
+│   │   │   └── ActivityStreamView.swift
+│   │   └── ProfileView.swift
+│   │
+│   ├── Parsing/                        # Protocol parsers
+│   │   ├── DNSParser.swift             # DNS query extraction
+│   │   └── TLSParser.swift             # TLS SNI extraction
+│   │
+│   ├── Services/                       # Firebase and app services
+│   │   ├── AccountabilityNetworkService.swift
+│   │   ├── ActivityStreamService.swift
+│   │   ├── AuthService.swift
+│   │   ├── BaseModelStorageService.swift
+│   │   ├── FilterSettingsService.swift
+│   │   ├── InvitationService.swift
+│   │   ├── NetworkExtensionService.swift
+│   │   ├── SafariExtensionService.swift
+│   │   ├── ServiceContainer.swift
+│   │   └── UserService.swift
+│   │
+│   ├── Simulation/                     # Mock packet infrastructure
+│   │   ├── PacketBuilder.swift         # Constructs raw packets byte-by-byte
+│   │   ├── PacketFlow.swift
+│   │   ├── PacketGenerator.swift       # Simulates browsing sessions
+│   │   ├── SimulationPacketTunnelProvider.swift  # Simulates NEPacketTunnelProvider
+│   │   └── SimulationData/
+│   │       └── BrowsingSessions.swift
+│   │
+│   └── Testing/                        # Validation tests
+│       ├── PacketGeneratorTests.swift
+│       └── ParserTests.swift
 │
-├── Parsing/                        # Protocol parsers
-│   ├── DNSParser.swift             # DNS query extraction
-│   └── TLSParser.swift             # TLS SNI extraction
-│
-├── Shared/                         # Core logic
-│   ├── DomainEntry.swift           # Data model
-│   ├── DomainLogStore.swift        # Persistence
-│   ├── DomainValidation.swift      # Blocklist checking, categorization
-│   └── BrowsingContext.swift       # App inference, browser detection
-│
-├── Testing/                        # Mock infrastructure
-│   ├── MockPacketTunnelProvider.swift  # Simulates NEPacketTunnelProvider
-│   ├── PacketBuilder.swift         # Constructs raw packets byte-by-byte
-│   ├── PacketGenerator.swift       # Simulates browsing sessions
-│   └── ParserTests.swift           # Validation tests
+├── PacketWatchSafariExtension/         # Safari Web Extension target
+│   ├── SafariWebExtensionHandler.swift
+│   └── Resources/                      # Web extension bundle
+│       ├── manifest.json
+│       ├── background.js
+│       ├── content.js
+│       ├── popup.html / popup.css / popup.js
+│       └── images/
 │
 └── README.md
 ```

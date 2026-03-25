@@ -1,13 +1,13 @@
 # PacketWatch (Test Project)
 
-A mock iOS accountability app that combines user authentication, onboarding, and accountability networking with simulated network packet monitoring. Users can sign up, configure their monitoring preferences, build an accountability network of allies and administrators, and view or report on network activity — all without needing Apple Network Extension entitlements.
+ PacketWatch helps users stay accountable online by building a personal accountability network and monitoring network activity. Users can sign up, configure monitoring preferences, designate allies and administrators within their accountability network, and view or generate reports on network activity.
 
-## What It Does
+Features
 
-### App Flow
-- **Authentication** — Sign up, sign in, and session restore via Firebase Auth
-- **Role-based onboarding** — New users choose to be monitored or to support others, then configure an administrator, filter sensitivity, and allies
-- **Accountability networks** — Invite administrators (who approve filter changes) and allies (who view activity reports)
+- **User authentication & onboarding — Sign-up flow with guided setup for new users
+- **Accountability networking — Build a network of allies and administrators who can help keep you accountable
+- **Monitoring preferences — Configure what gets monitored and how
+- **Network activity reporting — View and report on network traffic data
 - **Feature-gated UI** — Tab bar adapts based on user role; monitored users see their own activity, supporters see a list of networks they monitor
 
 ### Packet Monitoring
@@ -17,6 +17,9 @@ A mock iOS accountability app that combines user authentication, onboarding, and
 - **Validates domains** — Checks against blocklists for explicit, gambling, proxy content
 - **Infers active app** — Uses traffic fingerprints to determine which app made the request
 - **Detects alternate browsers** — Identifies Chrome, Firefox, Brave, etc. from their network signatures
+
+Status
+This project is actively in development. Network traffic data is currently simulated, as the app does not yet have Apple Network Extension entitlements. The goal is to integrate real packet monitoring once those entitlements are obtained.
 
 ## Project Structure
 
@@ -136,35 +139,10 @@ The `PacketGenerator` includes realistic scenarios:
 | Direct Explicit Access | Direct navigation to explicit sites |
 | Proxy Attempt | VPN/proxy service detection |
 
-## Key Files to Explore
-
-**Start here to understand packet structure:**
-- `PacketBuilder.swift` — See exactly how IP/UDP/TCP/DNS/TLS packets are constructed
-
-**Core parsing logic:**
-- `DNSParser.swift` — Length-prefixed label decoding
-- `TLSParser.swift` — Navigating nested TLS structures to find SNI
-
-**Accountability features:**
-- `DomainValidation.swift` — Blocklist matching, categorization
-- `BrowsingContext.swift` — App fingerprinting, browser detection
-
-## Running Tests
-
-From the app menu, tap **Run Parser Tests** to verify:
-- DNS query parsing (various domain formats)
-- DNS response rejection (QR bit check)
-- TLS SNI extraction
-- Malformed packet handling
-- Full packet stack verification
-
 ## Next Steps
 
-To build a real Network Extension:
 1. Request Network Extension entitlement from Apple
-2. Create Network Extension target (Packet Tunnel Provider)
-3. Move parsers to shared framework
-4. Replace `MockPacketTunnelProvider` with real `NEPacketTunnelProvider`
-5. Test on physical device
+2. Replace `SimulationPacketTunnelProvider` with real `NEPacketTunnelProvider`
+3. Test on physical device
 
 See Apple's [Network Extension documentation](https://developer.apple.com/documentation/networkextension) for details.

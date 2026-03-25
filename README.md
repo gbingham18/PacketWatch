@@ -1,9 +1,16 @@
 # PacketWatch (Test Project)
 
-A mock iOS accountability app that simulates network packet monitoring. This test project lets you explore DNS and TLS parsing, domain validation, app fingerprinting, and browser detection — all without needing Apple Network Extension entitlements.
+A mock iOS accountability app that combines user authentication, onboarding, and accountability networking with simulated network packet monitoring. Users can sign up, configure their monitoring preferences, build an accountability network of allies and administrators, and view or report on network activity — all without needing Apple Network Extension entitlements.
 
 ## What It Does
 
+### App Flow
+- **Authentication** — Sign up, sign in, and session restore via Firebase Auth
+- **Role-based onboarding** — New users choose to be monitored or to support others, then configure an administrator, filter sensitivity, and allies
+- **Accountability networks** — Invite administrators (who approve filter changes) and allies (who view activity reports)
+- **Feature-gated UI** — Tab bar adapts based on user role; monitored users see their own activity, supporters see a list of networks they monitor
+
+### Packet Monitoring
 - **Simulates VPN packet capture** — Generates realistic network traffic patterns
 - **Parses DNS queries** — Extracts domain names from DNS wire format
 - **Parses TLS ClientHello** — Extracts SNI (Server Name Indication) hostnames

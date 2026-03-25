@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "PacketWatch",
+  "version": "1.0",
+  "description": "Monitors Safari browsing for accountability",
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "permissions": [
+    "webNavigation"
+  ],
+  
+  "host_permissions": [
+    "*://*/*"
+  ]
+}

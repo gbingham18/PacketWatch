@@ -6,7 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1B21171C2F54E2D8002C22FD /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1B21171B2F54E2D8002C22FD /* FirebaseCore */; };
+		1B21171E2F54E729002C22FD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1B21171D2F54E729002C22FD /* FirebaseAuth */; };
+		1B2117202F54E72E002C22FD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1B21171F2F54E72E002C22FD /* FirebaseFirestore */; };
+		1B2A99B12F52BEEA00304CED /* PacketWatchSafariExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1B2A99992F52BEEA00304CED /* PacketWatchSafariExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1B947D262F3B03E000E14BD9 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B947D252F3B03E000E14BD9 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		1B2A99AF2F52BEEA00304CED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B947CB42F3317C000E14BD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B2A99982F52BEEA00304CED;
+			remoteInfo = PacketWatchSafariExtension;
+		};
 		1B947CCD2F3317C400E14BD9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B947CB42F3317C000E14BD9 /* Project object */;
@@ -23,35 +38,93 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1B2A99B62F52BEEA00304CED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1B2A99B12F52BEEA00304CED /* PacketWatchSafariExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1B2A99992F52BEEA00304CED /* PacketWatchSafariExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketWatchSafariExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B947CBC2F3317C000E14BD9 /* PacketWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PacketWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B947CCC2F3317C400E14BD9 /* PacketWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacketWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B947CD62F3317C400E14BD9 /* PacketWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PacketWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B947D252F3B03E000E14BD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1B2A99902F4C32CD00304CED /* Exceptions for "PacketWatch" folder in "PacketWatch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PacketWatchUITests/PacketWatchUITests.swift,
+				PacketWatchUITests/PacketWatchUITestsLaunchTests.swift,
+			);
+			target = 1B947CBB2F3317C000E14BD9 /* PacketWatch */;
+		};
+		1B2A99912F4C32CD00304CED /* Exceptions for "PacketWatch" folder in "PacketWatchUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				PacketWatchUITests/PacketWatchUITests.swift,
+				PacketWatchUITests/PacketWatchUITestsLaunchTests.swift,
+			);
+			target = 1B947CD52F3317C400E14BD9 /* PacketWatchUITests */;
+		};
+		1B2A99B52F52BEEA00304CED /* Exceptions for "PacketWatchSafariExtension" folder in "PacketWatchSafariExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 1B2A99982F52BEEA00304CED /* PacketWatchSafariExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		1B2A999A2F52BEEA00304CED /* PacketWatchSafariExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1B2A99B52F52BEEA00304CED /* Exceptions for "PacketWatchSafariExtension" folder in "PacketWatchSafariExtension" target */,
+			);
+			explicitFolders = (
+				Resources/_locales,
+				Resources/images,
+			);
+			path = PacketWatchSafariExtension;
+			sourceTree = "<group>";
+		};
 		1B947CBE2F3317C000E14BD9 /* PacketWatch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1B2A99902F4C32CD00304CED /* Exceptions for "PacketWatch" folder in "PacketWatch" target */,
+				1B2A99912F4C32CD00304CED /* Exceptions for "PacketWatch" folder in "PacketWatchUITests" target */,
+			);
 			path = PacketWatch;
-			sourceTree = "<group>";
-		};
-		1B947CCF2F3317C400E14BD9 /* PacketWatchTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PacketWatchTests;
-			sourceTree = "<group>";
-		};
-		1B947CD92F3317C400E14BD9 /* PacketWatchUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PacketWatchUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1B2A99962F52BEEA00304CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B947CB92F3317C000E14BD9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B21171C2F54E2D8002C22FD /* FirebaseCore in Frameworks */,
+				1B21171E2F54E729002C22FD /* FirebaseAuth in Frameworks */,
+				1B2117202F54E72E002C22FD /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +145,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B2117172F54E19E002C22FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1B947CB32F3317C000E14BD9 = {
 			isa = PBXGroup;
 			children = (
 				1B947CBE2F3317C000E14BD9 /* PacketWatch */,
-				1B947CCF2F3317C400E14BD9 /* PacketWatchTests */,
-				1B947CD92F3317C400E14BD9 /* PacketWatchUITests */,
+				1B947D252F3B03E000E14BD9 /* README.md */,
+				1B2A999A2F52BEEA00304CED /* PacketWatchSafariExtension */,
+				1B2117172F54E19E002C22FD /* Frameworks */,
 				1B947CBD2F3317C000E14BD9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +169,7 @@
 				1B947CBC2F3317C000E14BD9 /* PacketWatch.app */,
 				1B947CCC2F3317C400E14BD9 /* PacketWatchTests.xctest */,
 				1B947CD62F3317C400E14BD9 /* PacketWatchUITests.xctest */,
+				1B2A99992F52BEEA00304CED /* PacketWatchSafariExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +177,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1B2A99982F52BEEA00304CED /* PacketWatchSafariExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B2A99B22F52BEEA00304CED /* Build configuration list for PBXNativeTarget "PacketWatchSafariExtension" */;
+			buildPhases = (
+				1B2A99952F52BEEA00304CED /* Sources */,
+				1B2A99962F52BEEA00304CED /* Frameworks */,
+				1B2A99972F52BEEA00304CED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				1B2A999A2F52BEEA00304CED /* PacketWatchSafariExtension */,
+			);
+			name = PacketWatchSafariExtension;
+			packageProductDependencies = (
+			);
+			productName = PacketWatchSafariExtension;
+			productReference = 1B2A99992F52BEEA00304CED /* PacketWatchSafariExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		1B947CBB2F3317C000E14BD9 /* PacketWatch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B947CE02F3317C400E14BD9 /* Build configuration list for PBXNativeTarget "PacketWatch" */;
@@ -102,16 +206,21 @@
 				1B947CB82F3317C000E14BD9 /* Sources */,
 				1B947CB92F3317C000E14BD9 /* Frameworks */,
 				1B947CBA2F3317C000E14BD9 /* Resources */,
+				1B2A99B62F52BEEA00304CED /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1B2A99B02F52BEEA00304CED /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				1B947CBE2F3317C000E14BD9 /* PacketWatch */,
 			);
 			name = PacketWatch;
 			packageProductDependencies = (
+				1B21171B2F54E2D8002C22FD /* FirebaseCore */,
+				1B21171D2F54E729002C22FD /* FirebaseAuth */,
+				1B21171F2F54E72E002C22FD /* FirebaseFirestore */,
 			);
 			productName = PacketWatch;
 			productReference = 1B947CBC2F3317C000E14BD9 /* PacketWatch.app */;
@@ -129,9 +238,6 @@
 			);
 			dependencies = (
 				1B947CCE2F3317C400E14BD9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				1B947CCF2F3317C400E14BD9 /* PacketWatchTests */,
 			);
 			name = PacketWatchTests;
 			packageProductDependencies = (
@@ -153,9 +259,6 @@
 			dependencies = (
 				1B947CD82F3317C400E14BD9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				1B947CD92F3317C400E14BD9 /* PacketWatchUITests */,
-			);
 			name = PacketWatchUITests;
 			packageProductDependencies = (
 			);
@@ -173,6 +276,9 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					1B2A99982F52BEEA00304CED = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					1B947CBB2F3317C000E14BD9 = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -195,6 +301,9 @@
 			);
 			mainGroup = 1B947CB32F3317C000E14BD9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1B21171A2F54E2D8002C22FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1B947CBD2F3317C000E14BD9 /* Products */;
 			projectDirPath = "";
@@ -203,15 +312,24 @@
 				1B947CBB2F3317C000E14BD9 /* PacketWatch */,
 				1B947CCB2F3317C400E14BD9 /* PacketWatchTests */,
 				1B947CD52F3317C400E14BD9 /* PacketWatchUITests */,
+				1B2A99982F52BEEA00304CED /* PacketWatchSafariExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1B2A99972F52BEEA00304CED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B947CBA2F3317C000E14BD9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B947D262F3B03E000E14BD9 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +350,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1B2A99952F52BEEA00304CED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B947CB82F3317C000E14BD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +381,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1B2A99B02F52BEEA00304CED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B2A99982F52BEEA00304CED /* PacketWatchSafariExtension */;
+			targetProxy = 1B2A99AF2F52BEEA00304CED /* PBXContainerItemProxy */;
+		};
 		1B947CCE2F3317C400E14BD9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1B947CBB2F3317C000E14BD9 /* PacketWatch */;
@@ -269,6 +399,68 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1B2A99B32F52BEEA00304CED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketWatchSafariExtension/PacketWatchSafariExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketWatchSafariExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketWatchSafariExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingham.packetwatch.safariextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B2A99B42F52BEEA00304CED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketWatchSafariExtension/PacketWatchSafariExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PacketWatchSafariExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PacketWatchSafariExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingham.packetwatch.safariextension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		1B947CDE2F3317C400E14BD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,9 +585,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PacketWatch/PacketWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PacketWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,7 +602,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GrantsMacbook.PacketWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingham.packetwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -421,9 +615,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PacketWatch/PacketWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PacketWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -436,7 +632,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = GrantsMacbook.PacketWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bingham.packetwatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -515,6 +711,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1B2A99B22F52BEEA00304CED /* Build configuration list for PBXNativeTarget "PacketWatchSafariExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B2A99B32F52BEEA00304CED /* Debug */,
+				1B2A99B42F52BEEA00304CED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1B947CB72F3317C000E14BD9 /* Build configuration list for PBXProject "PacketWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -552,6 +757,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B21171A2F54E2D8002C22FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B21171B2F54E2D8002C22FD /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B21171A2F54E2D8002C22FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		1B21171D2F54E729002C22FD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B21171A2F54E2D8002C22FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1B21171F2F54E72E002C22FD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B21171A2F54E2D8002C22FD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B947CB42F3317C000E14BD9 /* Project object */;
 }
